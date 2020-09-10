@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>ABI</title>
+</head>
+
+<body>
+
+    <header>
+        <a href="accueil.html">
+            <img id="logo" src="../img/logo.png" alt="logo" />
+        </a>
+        <div id="titres">
+            <h1>ACTIVE BRETAGNE INFORMATIQUE</h1>
+            <h2>Gestion Contact</h2>
+        </div>
+        <div id="deconnexion">
+            <div id="bonjour">Bonjour</div>
+            <a href="../index.html"><button type="button" name="deconnexion">Deconnexion</button></a>
+        </div>
+    </header>
+    
+    <nav>
+        <fieldset id="menu">
+            <a href="liste_contact.html"><button type="button" name="liste_contacts">Liste Contacts</button></a>
+            <a href=""><button type="button" name="detail_contact">Detail Contact </button></a>
+            <a href="ajout_contact.html"><button type="button" name="ajout_contact">Ajout Contact</button></a>
+            <a href="document_contact.html"><button type="button" name="doc_contact" autofocus>Doc.Contact</button></a>
+        </fieldset>
+    </nav>
+
+    <article>
+        <h3>Documents contact</h3>
+        <section>
+            <fieldset>
+                <form id="form_recherche_contact" action="" method="">
+                    <label>Nom : </label><input id="name" type="text" name="nomContact" />
+                    <label>Prenom : </label><input id="firstname" type="text" name="prenomContact" />
+                    <button id="recherche" type="button">Recherche</button>
+                    <div id="message"></div>
+                </form>
+            </fieldset>
+
+
+            <!-- Traitement à afficher -->
+            <p id="result"></p>
+
+            <label for="projet">Projet : </label><input type="text" name="projet" id="projet" list="liste_projet"
+                required />
+            <datalist id="liste_projet">
+                <!--Données à récupérer sur BD -->
+                <option value="Projet1"></option>
+                <option value="Projet2"></option>
+                <option value="Projet3"></option>
+            </datalist>
+
+            <!-- Liste doc a afficher quand on séléctionne le projet -->
+            <ul id="liste_documents">
+                <li><a href="">Document1</a> </li>
+                <li><a href="">Document2</a> </li>
+                <li><a href="">Document3</a> </li>
+            </ul>
+        </section>
+    </article>
+
+    <footer>
+        <a href="">Information Legal</a>
+        <a href="">Contact</a>
+    </footer>
+
+    <script src="../js/doc_contactForm.js"></script>
+
+</body>
+
+</html>

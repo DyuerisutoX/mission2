@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="../style.css" />
+	<title>ABI</title>
+</head>
+
+<body>
+
+	<header>
+		<a href="accueil.html">
+			<img id="logo" src="../img/logo.png" alt="logo" />
+		</a>
+		<div id="titres">
+			<h1>ACTIVE BRETAGNE INFORMATIQUE</h1>
+			<h2>Gestion Clients</h2>
+		</div>
+		<div id="deconnexion">
+			<div id="bonjour">Bonjour</div>
+			<a href="../index.html"><button type="button" name="deconnexion">Deconnexion</button></a>
+		</div>
+	</header>
+
+	<nav>
+		<fieldset id="menu">
+			<a href="liste_client.html"><button type="button" name="liste_clients">Liste Clients</button></a>
+			<a href="details_client.html"><button type="button" name="detail_client" autofocus>Detail
+					Client</button></a>
+			<a href="ajout_client.html"><button type="button" name="ajout_client">Ajout Client</button></a>
+		</fieldset>
+	</nav>
+
+	<article>
+		<h3>Détails client</h3>
+
+		<fieldset>
+			<form id="form_recherche_client" action="http://polenumerique.re/dl/dwwm2020/testerForm.php" method="POST">
+				<label for="idClient">Id client : </label><input id="idClient" type="text" name="idClient" />
+				<label for="raisonSociale">Raison sociale : </label><input id="raisonSociale" type="text"
+					name="raisonSociale" />
+				<label for="ville">Ville : </label><input id="ville" type="text" name="ville" />
+				<label for="activite">Secteur d'activité : </label><input id="activite" type="text" name="activite" />
+				<button id="boutonRechercheClient" type="button">Recherche</button>
+			</form>
+		</fieldset>
+
+		<div id="messageErreur"></div>
+
+		<section id="resultat_recherche_client">
+			<div>Id client : <span id="rIdClient">0180</span></div>
+			<div>Raison sociale : <span id="rRaisonSociale">Carrefour</span></div>
+			<div>Type de société : <span id="rTypeSociete">privé</span></div>
+			<div>Domaine d'activité : <span id="rActivite">grande distribution</span></div>
+			<div>Adresse : <span id="rAdresseClient">5 avenue...</span></div>
+			<div>Téléphone : <span id="rTelephoneClient">0262 .. .. ..</span></div>
+			<div>Nature : <span id="rNature">principale</span></div>
+			<div>Chiffre d'affaires : <span id="rChiffreAffaires">1 000 000 €</span></div>
+			<div>Effectif : <span id="rEffectif">5 000</span></div>
+			<ul>
+				<li>Projet <span id="rNomProjet1">Lune</span> (<span id="rIdProjet1">256</span>), contacts :
+					<ul>
+						<li>
+							Id contact : <span id="rIdContact1P1">3200</span><br />
+							Fonction : <span id="rFonctionContact1P1">Product owner</span><br />
+							Prénom : <span id="rPrenomContact1P1">Jule</span><br />
+							Nom : <span id="rNomContact1P1">Kalagan</span><br />
+							Téléphone : <span id="rTelephoneContact1P1">0262 .. .. ..</span>
+						</li>
+
+						<li>
+							Id contact : <span id="rIdContact2P1">4423</span><br />
+							Fonction : <span id="rFonctionContact2P1">Commercial</span><br />
+							Prénom : <span id="rPrenomContact2P1">Zac</span><br />
+							Nom : <span id="rNomContact2P1">Bertrand</span><br />
+							Téléphone : <span id="rTelephoneContact2P1">0262 .. .. ..</span><br />
+							Durée intervention : <span id="rDureeInterventionContact2P1">30 h</span>
+						</li>
+					</ul>
+				</li>
+
+				<li>Projet <span id="rNomProjet2">Mars</span> (<span id="rIdProjet2">302</span>), contacts :
+					<ul>
+						<li>
+							Id contact : <span id="rIdContact1P2">5002</span><br />
+							Fonction : <span id="rFonctionContact1P2">Product owner</span><br />
+							Prénom : <span id="rPrenomContact1P2">Xavier</span><br />
+							Nom : <span id="rNomContact1P2">Neon</span><br />
+							Téléphone : <span id="rTelephoneContact1P2">0262 .. .. ..</span>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<div>Commentaires : <span id="rCommentaire"></span></div>
+			<a href='ajout_contact.html'><button id='ajout_contact_au_client' type='button'
+					name='ajout_contact_au_client'>Ajout contact</button></a>
+		</section>
+	</article>
+
+	<footer>
+		<a href="">Information Legal</a>
+		<a href="">Contact</a>
+	</footer>
+
+	<script src="../js/rechercheClient.js"></script>
+	
+</body>
+
+</html>

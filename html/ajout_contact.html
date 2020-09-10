@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="../style.css" />
+	<title>ABI</title>
+</head>
+
+<body>
+
+	<header>
+		<a href="accueil.html">
+			<img id="logo" src="../img/logo.png" alt="logo" />
+		</a>
+
+		<div id="titres">
+			<h1>ACTIVE BRETAGNE INFORMATIQUE</h1>
+			<h2>Gestion Contact</h2>
+		</div>
+
+		<div id="deconnexion">
+			<div id="bonjour">Bonjour</div>
+			<a href="../index.html"><button type="button" name="deconnexion">Deconnexion</button></a>
+		</div>
+	</header>
+
+	<nav>
+		<fieldset id="menu">
+			<a href="liste_contact.html"><button type="button" name="liste_contacts">Liste Contacts</button></a>
+			<a href=""><button type="button" name="detail_contact">Detail Contact </button></a>
+			<a href="ajout_contact.html"><button type="button" name="ajout_contact" autofocus>Ajout Contact</button></a>
+			<a href="document_contact.html"><button type="button" name="doc_contact">Doc.Contact</button></a>
+		</fieldset>
+	</nav>
+
+	<article>
+		<h3>Ajout contact</h3>
+
+		<fieldset>
+			<legend>Ajout contact</legend>
+			<form name="ajout_contact" id="ajout_contact" action="http://polenumerique.re/dl/dwwm2020/testerForm.php" method="POST">
+				<fieldset>
+					<legend>Identité</legend>
+					<label for="nom">Nom: </label><input type="text" name="nom" required />
+					<label for="prenom">Prenom: </label><input type="text" name="prenom" required />
+				</fieldset>
+
+				<fieldset>
+					<legend>Coordonnée</legend>
+					<label for="numero_tel">Numéro de téléphone: </label><input type="number" name="numero_tel" required />
+				</fieldset>
+
+				<fieldset>
+					<legend>Projet</legend>
+					<label for="client">Client: </label><input type="text" name="client" id="client" list="liste_client" required />
+
+					<datalist id="liste_client">
+						<!--Données à récupérer sur BD -->
+						<option value="Entreprise1"></option>
+						<option value="Entreprise2"></option>
+						<option value="Entreprise3"></option>
+					</datalist>
+
+					<label for="nom_projet">Le projet: </label><input type="text" name="nom_projet" id="nom_projet" required />
+					<label for="documents">Documents: </label><input id="fichier" type="file" name="fichier" multiple required />
+					<div id="fichierManquant"></div>
+				</fieldset>
+
+				<fieldset>
+					<label for="duree_cumulee">Durée cumulée: </label><input type="number" name="duree_cumulee" required />
+					<label>PO: </label>
+					<input type="radio" class="radioPo" id="po_oui" name="po" value="true" />
+					<label for="po_oui">Oui</label>
+					<input type="radio" class="radioPo" id="po_non" name="po" value="false" />
+					<label for="po_non">Non</label>
+					<div id="radioPo"></div>
+				</fieldset>
+
+				<button type="button" name="valider" id="envoie">Valider</button>
+				<div id="erreur"></div> <!-- Ajout div -->
+
+			</form>
+		</fieldset>
+	</article>
+
+	<footer>
+		<a href="">Information Legal</a>
+		<a href="">Contact</a>
+	</footer>
+
+	<script src="../js/ajout_contactForm.js"></script>
+
+</body>
+
+</html>

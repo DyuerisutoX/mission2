@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="../style.css" />
+	<title>ABI</title>
+</head>
+
+<body>
+
+	<header>
+		<a href="accueil.html">
+			<img id="logo" src="../img/logo.png" alt="logo" />
+		</a>
+		<div id="titres">
+			<h1>ACTIVE BRETAGNE INFORMATIQUE</h1>
+			<h2>Gestion Clients</h2>
+		</div>
+		<div id="deconnexion">
+			<div id="bonjour">Bonjour</div>
+			<a href="../index.html"><button type="button" name="deconnexion">Deconnexion</button></a>
+		</div>
+	</header>
+
+	<nav>
+		<fieldset id="menu">
+			<a href="liste_client.html"><button type="button" name="liste_clients">Liste Clients</button></a>
+			<a href="details_client.html"><button type="button" name="detail_client">Detail Client</button></a>
+			<a href="ajout_client.html"><button type="button" name="ajout_client" autofocus>Ajout Client</button></a>
+		</fieldset>
+	</nav>
+
+	<article>
+		<h3>Ajout client</h3>
+		<fieldset>
+			<legend>Ajouter Client</legend>
+			<form name="ajouter_client" id="ajouter_client" action="http://polenumerique.re/dl/dwwm2020/testerForm.php"
+				method="post">
+				<fieldset>
+					<legend>Raison sociale</legend>
+					<input type="text" id="raison_social" name="raison_social" required />
+				</fieldset>
+
+				<fieldset>
+					<legend>Type Socitété</legend>
+					<input type="radio" class="radioTypeSo" id="type1" name="type_Societe" value="public" />
+					<label for="type1">Public</label>
+					<input type="radio" class="radioTypeSo" id="type2" name="type_Societe" value="prive" />
+					<label for="type2">Privé</label>
+					<div id="radioTypeSo"></div>
+				</fieldset>
+
+				<fieldset>
+					<legend>Activité</legend>
+					<input type="text" name="activite" id="activite" list="liste_activite" required />
+					<datalist id="liste_activite">
+						<option value="Agricole"></option>
+						<option value="Commerciale"></option>
+						<option value="Industrielle"></option>
+						<option value="Artisanale"></option>
+						<option value="Libérale"></option>
+					</datalist>
+				</fieldset>
+
+				<fieldset>
+					<legend>Coordonnées</legend>
+					<label for="num_rue">N° rue: </label><input type="number" name="num_rue" id="num_rue" required />
+					<label for="rue">Rue: </label><input type="text" name="rue" id="rue" required />
+					<label for="code_postal">Code Postal: </label><input id="code_postal" type="number"
+						name="code_postal" required />
+					<label for="ville">Ville: </label><input type="text" name="ville" id="ville" required />
+					<label for="numero_tel">Numéro de téléphone: </label><input id="numero_tel" type="number"
+						name="numero_tel" required />
+				</fieldset>
+
+				<fieldset>
+					<legend>Nature</legend>
+					<input type="radio" class="radioNature" id="nature1" name="nature" value="principal" />
+					<label for="principal">Principal</label>
+					<input type="radio" class="radioNature" id="nature2" name="nature" value="secondaire" />
+					<label for="secondaire">Secondaire</label>
+					<input type="radio" class="radioNature" id="nature3" name="nature" value="ancienne" />
+					<label for="ancienne">Ancienne</label>
+					<div id="radioNature"></div>
+				</fieldset>
+
+				<fieldset>
+					<legend>Chiffre d'affaire</legend>
+					<input type="number" name="CA" id="CA" required="" />
+				</fieldset>
+
+				<fieldset>
+					<legend>Effectif</legend>
+					<input type="number" name="effectif" id="effectif" required />
+				</fieldset>
+
+				<fieldset>
+					<legend>Contacts connus</legend>
+					<!-- <input type="text" name="contact_connus" id="contact_connus" list="liste_contact" required /> -->
+					<input type="text" id="nom" placeholder="Nom" name="nom" required />
+					<input type="text" id="prenom" placeholder="Prenom" name="prenom" required />
+					<!-- Récupérer les données sur BD -->
+					<datalist id="liste_contact">
+						<option value="nom1"></option>
+						<option value="nom2"></option>
+						<option value="nom3"></option>
+					</datalist>
+				</fieldset>
+
+				<fieldset>
+					<legend>Commentaire</legend>
+					<textarea id="commentaire" maxlength="250" cols="30" name="commentaire"></textarea>
+				</fieldset>
+
+				<button type="button" id="valider" name="valider">Valider</button>
+				<div id="erreur"></div>
+			</form>
+		</fieldset>
+	</article>
+
+	<footer>
+		<a href="">Information Legal</a>
+		<a href="">Contact</a>
+	</footer>
+
+	<script src="../js/controleAjoutClient.js"></script>
+
+</body>
+
+</html>

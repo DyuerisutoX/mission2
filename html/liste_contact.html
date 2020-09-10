@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../style.css" />
+        <title>ABI</title>
+    </head>
+
+    <body>
+
+        <header>
+            <a href="accueil.html">
+                <img id="logo" src="../img/logo.png" alt="logo" />
+            </a>
+
+            <div id="titres">
+                <h1>ACTIVE BRETAGNE INFORMATIQUE</h1>
+                <h2>Gestion Contact</h2>
+            </div>
+
+            <div id="deconnexion">
+                <div id="bonjour">Bonjour</div>
+                <a href="../index.html"><button type="button" name="deconnexion">Deconnexion</button></a>
+            </div>
+        </header>
+
+        <nav>
+            <fieldset id="menu">
+
+                <a href="liste_contact.html"><button type="button" name="liste_contacts" autofocus>ListeContacts</button></a>
+                <a href=""><button type="button" name="detail_contact">Detail Contact </button></a>
+                <a href="ajout_contact.html"><button type="button" name="ajout_contact">Ajout Contact</button></a>
+                <a href="document_contact.html"><button type="button" name="doc_contact">Doc.Contact</button></a>
+
+            </fieldset>
+        </nav>
+
+        <article>
+
+            <h3>Liste contacts</h3>
+
+            <section>
+
+                <fieldset>
+                    <legend>Client</legend>
+
+                    <form id="form_recherche_client" action="http://polenumerique.re/dl/dwwm2020/testerForm.php" method="Post">
+                        <label for="projet">Raison Sociale : </label>
+                        <input type="text" name="client" id="client" list="liste_client"  />
+
+                        <datalist id="liste_client">
+                            <!--Données à récupérer sur BD -->
+                            <option value="Koch and Sons"></option>
+                            <option value="Steuber LLC"></option>
+                            <option value="Konopelski Group"></option>
+                            <option value="Harber Inc"></option>
+                        </datalist>
+
+                        <button type="button" id="recherche">Rechercher</button>
+                    </form>
+                    <div id="client_manquant"></div>
+                </fieldset>
+
+                <p id="nom_ent">
+                    Client : Harber INC
+                </p>
+
+                <table>
+
+                    <tr>
+                        <th><img src="../img/numero.svg" id="numero">N°</th>
+                        <th><img src="../img/name.svg" id="name">Nom</th>
+                        <th><img src="../img/name.svg" id="name">Prenom</th>
+                        <th><img src="../img/phone.svg" id="adresse"> Téléphone</th>
+                        <th><img src="../img/mail.svg" id="adresse"> E-mail</th>
+                    </tr>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Ethan</td>
+                        <td>Jaden</td>
+                        <td>09 83 27 17 75</td>
+                        <td>ethanjaden@gmail.com</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Rhodes</td>
+                        <td>Alexia</td>
+                        <td>O6 51 73 71 91</td>
+                        <td>alexiarhodes@hotmail.fr</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Preston</td>
+                        <td>Charlie</td>
+                        <td>09 87 31 32 39</td>
+                        <td>charliepreston@outlook.fr</td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>Garcia</td>
+                        <td>Andréa</td>
+                        <td>06 12 56 27 62</td>
+                        <td>andregarcia@yahoo.fr</td>
+                    </tr>
+
+                </table>
+
+            </section>
+
+        </article>
+
+        <footer>
+            <a href="">Information Legal</a>
+            <a href="">Contact</a>
+        </footer>
+
+        <script src="../js/listeContact1.js"></script>
+
+    </body>
+
+</html>
